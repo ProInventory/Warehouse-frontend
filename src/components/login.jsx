@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
 
 class Login extends Component {
+    handleLogin = (e) => {
+        e.preventDefault();
+        toast.success("Login Successful");
+    };
+
     render() {
         return (
             <React.Fragment>
@@ -23,7 +29,12 @@ class Login extends Component {
                             </div>
                             <input type="password" name="Password" /> <br />
                         </div>
-                        <button className="btn btn-primary">Log In</button>
+                        <button
+                            onClick={this.handleLogin}
+                            className="btn btn-primary"
+                        >
+                            Log In
+                        </button>
                     </form>
                 </div>
             </React.Fragment>
