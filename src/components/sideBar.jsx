@@ -2,10 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const logo = require("./images/logo.png");
+const pattern = require("./images/pattern.png");
 
 const Container = styled.div`
     .side {
         background-color: #e8e8e8;
+        background-image: url(${pattern});
+        background-size: 500px;
+        background-position: center;
+        background-repeat: repeat;
     }
 
     .logoImage {
