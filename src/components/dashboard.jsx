@@ -54,6 +54,23 @@ const Container = styled.div`
     }
 `;
 
+let today = new Date();
+let curHr = today.getHours();
+let time = "";
+
+var timeData = [
+    [0, 4, "night"],
+    [5, 11, "morning"], //Store messages in an array
+    [12, 17, "afternoon"],
+    [18, 24, "night"],
+];
+
+for (var i = 0; i < timeData.length; i++) {
+    if (curHr >= timeData[i][0] && curHr <= timeData[i][1]) {
+        time = timeData[i][2];
+    }
+}
+
 const Dashboard = () => {
     const [name, setName] = useState("User 1");
 
@@ -74,7 +91,7 @@ const Dashboard = () => {
                                 Welcome <div class="name">{name}</div>,
                             </div>
                             <div className="welcomeBody">
-                                Welcome back, Have a great day!
+                                Welcome back, Have a great {time}!
                             </div>
                         </div>
 
