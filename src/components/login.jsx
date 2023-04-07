@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import styled from "styled-components";
 
@@ -105,45 +105,43 @@ const Container = styled.div`
     padding: 20px;
 `;
 
-class Login extends Component {
-    handleLogin = (e) => {
-        e.preventDefault();
-        toast.success("Login Successful");
-    };
-
-    render() {
-        return (
-            <React.Fragment>
-                <Container>
-                    <div className="center">
-                        <form>
-                            <div className="txt_field">
-                                <div className="texts">
-                                    <label>Username</label>
-                                    <br></br>
-                                </div>
-                                <input type="text" name="Name" />
-                                <br />
-                            </div>
-                            <div className="txt_field">
-                                <div className="texts">
-                                    <label>Password</label>
-                                    <br></br>
-                                </div>
-                                <input type="password" name="Password" /> <br />
-                            </div>
-                            <button
-                                onClick={this.handleLogin}
-                                className="btn btn-primary"
-                            >
-                                Log In
-                            </button>
-                        </form>
-                    </div>
-                </Container>
-            </React.Fragment>
-        );
-    }
+function handleLogin(e) {
+    e.preventDefault();
+    toast.success("Login Successful");
 }
+
+const Login = () => {
+    return (
+        <React.Fragment>
+            <Container>
+                <div className="center">
+                    <form>
+                        <div className="txt_field">
+                            <div className="texts">
+                                <label>Username</label>
+                                <br></br>
+                            </div>
+                            <input type="text" name="Name" />
+                            <br />
+                        </div>
+                        <div className="txt_field">
+                            <div className="texts">
+                                <label>Password</label>
+                                <br></br>
+                            </div>
+                            <input type="password" name="Password" /> <br />
+                        </div>
+                        <button
+                            onClick={handleLogin}
+                            className="btn btn-primary"
+                        >
+                            Log In
+                        </button>
+                    </form>
+                </div>
+            </Container>
+        </React.Fragment>
+    );
+};
 
 export default Login;

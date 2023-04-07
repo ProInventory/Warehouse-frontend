@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import SideBar from "./sideBar";
@@ -34,31 +34,26 @@ const Container = styled.div`
     }
 `;
 
-class Dashboard extends Component {
-    state = {
-        name: "User 1",
-    };
+const Dashboard = () => {
+    const [name, setName] = useState("User 1");
 
-    render() {
-        return (
-            <React.Fragment>
-                <Container>
-                    <div className="row">
-                        <div className="sideBar">
-                            {" "}
-                            <SideBar />
-                        </div>
-                        <div className="dashboard">
-                            <div className="welcome">
-                                Welcome{" "}
-                                <div class="name">{this.state.name}</div>,
-                            </div>
+    return (
+        <React.Fragment>
+            <Container>
+                <div className="row">
+                    <div className="sideBar">
+                        {" "}
+                        <SideBar />
+                    </div>
+                    <div className="dashboard">
+                        <div className="welcome">
+                            Welcome <div class="name">{name}</div>,
                         </div>
                     </div>
-                </Container>
-            </React.Fragment>
-        );
-    }
-}
+                </div>
+            </Container>
+        </React.Fragment>
+    );
+};
 
 export default Dashboard;
