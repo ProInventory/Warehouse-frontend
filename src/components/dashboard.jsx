@@ -43,13 +43,13 @@ class Dashboard extends Component {
         return (
             <React.Fragment>
                 <Container>
-                    <div class="row">
-                        <div class="sideBar">
+                    <div className="row">
+                        <div className="sideBar">
                             {" "}
                             <SideBar />
                         </div>
-                        <div class="dashboard">
-                            <div class="welcome">
+                        <div className="dashboard">
+                            <div className="welcome">
                                 Welcome{" "}
                                 <div class="name">{this.state.name}</div>,
                             </div>
