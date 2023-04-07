@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import NavBar from "./navBar";
 import MainDash from "./dashboard/main";
 import SideBar from "./sideBar";
 
@@ -37,6 +38,7 @@ const Dashboard = () => {
                     </div>
 
                     <div id="dashElements">
+                        <NavBar />
                         <MainDash />
                     </div>
                 </div>
