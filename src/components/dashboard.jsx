@@ -17,11 +17,21 @@ const Container = styled.div`
     }
 
     #dashElements {
+        background-color: #d1d1d1;
         display: table-cell;
         width: 80%;
     }
 
     .welcome {
+        padding: 20px;
+        font-family: "Rubik", sans-serif;
+    }
+
+    .welcomeHead {
+        font-size: 25px;
+    }
+
+    .welcomeBody {
         font-size: 18px;
     }
 
@@ -47,7 +57,12 @@ const Dashboard = () => {
 
                     <div id="dashElements">
                         <div className="welcome">
-                            Welcome <div class="name">{name}</div>,
+                            <div className="welcomeHead">
+                                Welcome <div class="name">{name}</div>,
+                            </div>
+                            <div className="welcomeBody">
+                                Welcome back, Have a great day!
+                            </div>
                         </div>
                     </div>
                 </div>
