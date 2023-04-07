@@ -4,24 +4,21 @@ import styled from "styled-components";
 import SideBar from "./sideBar";
 
 const Container = styled.div`
-    body {
-        background-color: #a6a6a6;
-    }
-
-    .sideBar {
-        float: left;
-        width: 20%;
-    }
-
-    .dashboard {
-        float: left;
-        width: 80%;
-    }
-
-    .row:after {
-        content: "";
+    #parent {
         display: table;
-        clear: both;
+        width: 100%;
+        height: 100%;
+    }
+
+    #sidebar {
+        display: table-cell;
+        width: 20%;
+        vertical-align: top;
+    }
+
+    #dashElements {
+        display: table-cell;
+        width: 80%;
     }
 
     .welcome {
@@ -37,15 +34,18 @@ const Container = styled.div`
 const Dashboard = () => {
     const [name, setName] = useState("User 1");
 
+    const side = document.querySelector("#root");
+    side.style.setProperty("height", "100%");
+
     return (
         <React.Fragment>
             <Container>
-                <div className="row">
-                    <div className="sideBar">
-                        {" "}
+                <div id="parent">
+                    <div id="sidebar" style={{ height: "100vh" }}>
                         <SideBar />
                     </div>
-                    <div className="dashboard">
+
+                    <div id="dashElements">
                         <div className="welcome">
                             Welcome <div class="name">{name}</div>,
                         </div>
