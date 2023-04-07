@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import SideBar from "./sideBar";
+import Graph from "./dashboard/graph";
 
 const Container = styled.div`
     #parent {
@@ -23,7 +24,7 @@ const Container = styled.div`
     }
 
     .welcome {
-        padding: 20px;
+        padding: 35px;
         font-family: "Rubik", sans-serif;
     }
 
@@ -38,6 +39,18 @@ const Container = styled.div`
     .name {
         display: inline;
         color: #ab47bc;
+    }
+
+    .graphContainer {
+        padding-left: 50px;
+    }
+
+    .graph {
+        possition: relative;
+        border-radius: 25px;
+        background: #e8e8e8;
+        padding: 20px;
+        width: 400px;
     }
 `;
 
@@ -62,6 +75,12 @@ const Dashboard = () => {
                             </div>
                             <div className="welcomeBody">
                                 Welcome back, Have a great day!
+                            </div>
+                        </div>
+
+                        <div className="graphContainer">
+                            <div className="graph">
+                                <Graph />
                             </div>
                         </div>
                     </div>
