@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import NavBar from "./navBar";
@@ -26,6 +26,8 @@ const Container = styled.div`
 `;
 
 const Dashboard = () => {
+    const [name, setName] = useState("User 1");
+
     const side = document.querySelector("#root");
     side.style.setProperty("height", "100%");
 
@@ -34,7 +36,7 @@ const Dashboard = () => {
             <Container>
                 <div id="parent">
                     <div id="sidebar" style={{ height: "100vh" }}>
-                        <SideBar />
+                        <SideBar user={name} />
                     </div>
 
                     <div id="dashElements">
