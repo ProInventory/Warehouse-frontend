@@ -4,6 +4,7 @@ import styled from "styled-components";
 import NavBar from "./navBar";
 import MainDash from "./dashboard/main";
 import SideBar from "./sideBar";
+import NumStat from "./numStat";
 
 const Container = styled.div`
     #parent {
@@ -42,6 +43,7 @@ const Dashboard = () => {
                     <div id="dashElements">
                         <NavBar />
                         <MainDash />
+                        <NumStat />
                     </div>
                 </div>
             </Container>

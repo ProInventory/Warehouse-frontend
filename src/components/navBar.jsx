@@ -27,15 +27,20 @@ const Container = styled.div`
     .welcome {
         padding: 15px;
         padding-left: 50px;
-        font-family: "Rubik", sans-serif;
+        font-family: "Rubik";
+        
     }
 
     .welcomeHead {
         font-size: 20px;
+        font-weight: 700;
     }
 
     .welcomeBody {
         font-size: 15px;
+        font-style:italic;
+        position: relative;
+        top: -8px;
     }
 
     .name {
