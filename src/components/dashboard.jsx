@@ -20,9 +20,9 @@ const Container = styled.div`
     }
 
     #dashElements {
+        overflow: hidden;
         background-color: #d1d1d1;
         display: table-cell;
-        width: 80%;
     }
 `;
 

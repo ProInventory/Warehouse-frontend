@@ -12,6 +12,7 @@ const Container = styled.div`
         border-radius: 25px;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
         transition: box-shadow 0.3s ease-in-out;
+        position: relative;
     }
 
     .center:hover {
@@ -29,19 +30,19 @@ const Container = styled.div`
     }
 
     .time-txt {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         color: #6c757d;
         font-family: 'Rubik', sans-serif;
-        padding: 0px 125px 0px 15px;
+        padding: 0px 116px 0px 15px;
     }
 
     .time-txt-sales {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         color: #6c757d;
         font-family: 'Rubik', sans-serif;
-        padding: 25px 0px 0px 15px;
+        padding: 40px 0px 0px 15px;
     }
 
     .time-data {
@@ -53,7 +54,7 @@ const Container = styled.div`
     }
 
     .time-data-big {
-        font-size: 30px;
+        font-size: 35px;
         font-weight: 800;
         color: #6c757d;
         font-family: 'Rubik';
@@ -75,6 +76,7 @@ const Container = styled.div`
 
 const Login = () => {
     return (
+        <div style={{ position: 'relative', top:-220, left: 500 }}>
         <React.Fragment>
             <Container>
                 <div className="center">
@@ -96,6 +98,7 @@ const Login = () => {
                 </div>
             </Container>
         </React.Fragment>
+        </div>
     );
 };
 

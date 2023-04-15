@@ -37,6 +37,7 @@ const Container = styled.div`
 	}
 
 	.sideBar_items {
+		
 		position: absolute;
 		top: 16%;
 		margin-left: 2%;
@@ -59,15 +60,16 @@ const Container = styled.div`
 	}
 
 	.box {
+		height: 100vh; /* set the height of the container to the height of the viewport */
+  		display: flex;
+		transition: 0.5s ease-in-out;
 		position: absolute;
-		bottom: 0%;
-		height: 32%;
+		top: 95%;
 		width: 20%;
 		max-width: 20%;
 		border-top-left-radius: 60px;
 		border-top-right-radius: 60px;
 		padding: 10px;
-		margin-top: -10px;
 		background-color: #b19cd8;
 	}
 
@@ -119,6 +121,11 @@ const Container = styled.div`
 		padding: 10px 20px;
 		border: none;
 		cursor: pointer;
+	}
+
+	.box:hover{
+		transition: 0.5s ease-in-out;
+		top: 60%;
 	}
 `;
 

@@ -60,8 +60,8 @@ const options = {
                 display: true,
                 text: "LKR",
                 font: {
-                    family: "'Rubik', sans-serif",
-                    size: 14,
+                    family: 'Rubik',
+                    size: 15,
                     weight: "bold",
                 },
             },
