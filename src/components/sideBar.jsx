@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -37,7 +38,6 @@ const Container = styled.div`
 	}
 
 	.sideBar_items {
-		
 		position: absolute;
 		top: 16%;
 		margin-left: 2%;
@@ -61,7 +61,7 @@ const Container = styled.div`
 
 	.box {
 		height: 100vh; /* set the height of the container to the height of the viewport */
-  		display: flex;
+		display: flex;
 		transition: 0.5s ease-in-out;
 		position: absolute;
 		top: 95%;
@@ -123,9 +123,25 @@ const Container = styled.div`
 		cursor: pointer;
 	}
 
-	.box:hover{
+	.box:hover {
 		transition: 0.5s ease-in-out;
 		top: 60%;
+	}
+
+	a:link {
+		text-decoration: none;
+	}
+
+	a:visited {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a:active {
+		text-decoration: underline;
 	}
 `;
 
@@ -150,7 +166,9 @@ const SideBar = (props) => {
 									<td>
 										<FontAwesomeIcon icon={faBars} />
 									</td>
-									<td>Dashboard</td>
+									<td>
+										<Link to="/home">Dashboard</Link>
+									</td>
 								</tr>
 								<tr>
 									<td>
@@ -158,26 +176,38 @@ const SideBar = (props) => {
 											icon={faCubesStacked}
 										/>
 									</td>
-									<td>Status</td>
+									<td>
+										<Link to="/status">Status</Link>
+									</td>
 								</tr>
 								<tr>
 									<td>
 										<FontAwesomeIcon icon={faChartSimple} />
 									</td>
-									<td>Charts</td>
+									<td>
+										<Link to="/charts">Charts</Link>
+									</td>
 								</tr>
 								<tr>
 									<td>
 										<FontAwesomeIcon icon={faTruck} />
 									</td>
-									<td>Deliveries</td>
+									<td>
+										<Link to="/deliveries">Deliveries</Link>
+									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div className="settings">SETTINGS</div>
-					<div className="billing">BILLING</div>
-					<div className="products">PRODUCTS</div>
+					<div className="settings">
+						<Link to="/settings">SETTINGS</Link>
+					</div>
+					<div className="billing">
+						<Link to="/billing">BILLING</Link>
+					</div>
+					<div className="products">
+						<Link to="/products">PRODUCTS</Link>
+					</div>
 				</div>
 
 				<div className="box">
