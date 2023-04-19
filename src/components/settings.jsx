@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import SideBar from "./sideBar";
+import Main from "./settings/main";
 
 const Container = styled.div`
 	#parent {
@@ -32,7 +33,7 @@ const Settings = () => {
 						<SideBar />
 					</div>
 					<div id="settings">
-						<h1>Settings</h1>
+						<Main />
 					</div>
 				</div>
 			</Container>
