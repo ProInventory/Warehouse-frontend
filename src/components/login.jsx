@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { toast } from "react-toastify";
 
@@ -113,6 +114,12 @@ const Login = () => {
 		document.title = "Login | ProInventory";
 	}, []);
 
+	const navigate = useNavigate();
+	const handleClick = (e) => {
+		handleLogin(e);
+		navigate("/home");
+	};
+
 	return (
 		<React.Fragment>
 			<Container>
@@ -134,7 +141,7 @@ const Login = () => {
 							<input type="password" name="Password" /> <br />
 						</div>
 						<button
-							onClick={handleLogin}
+							onClick={handleClick}
 							className="btn btn-primary"
 						>
 							Log In
