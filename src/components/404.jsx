@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import SideBar from "./sideBar";
+import SideBar from "./common/sideBar";
 
 const Container = styled.div`
 	#parent {

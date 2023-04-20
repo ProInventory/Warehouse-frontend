@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import SideBar from "./sideBar";
+import SideBar from "./common/sideBar";
 import Main from "./settings/main";
 
 const Container = styled.div`

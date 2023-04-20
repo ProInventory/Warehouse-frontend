@@ -9,9 +9,6 @@ import {
 	faTruck,
 } from "@fortawesome/free-solid-svg-icons";
 
-const logo = require("./images/logo.png");
-const pattern = require("./images/pattern.png");
-
 const Container = styled.div`
 	* {
 		font-family: "Roboto", sans-serif;
@@ -19,7 +16,7 @@ const Container = styled.div`
 
 	.side {
 		background-color: #e8e8e8;
-		background-image: url(${pattern});
+		background-image: url(pattern.png);
 		background-size: 500px;
 		background-position: center;
 		background-repeat: repeat;
@@ -153,7 +150,7 @@ const SideBar = (props) => {
 			<Container>
 				<div className="side" style={{ height: "100vh" }}>
 					<div className="logoImage">
-						<img src={logo} alt="logo" />
+						<img src="logo_sidebar.png" alt="logo" />
 					</div>
 				</div>
 

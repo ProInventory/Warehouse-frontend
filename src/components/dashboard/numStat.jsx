@@ -70,7 +70,7 @@ const Container = styled.div`
 	}
 `;
 
-const Login = () => {
+const NumStat = () => {
 	return (
 		<div style={{ position: "relative", top: -220, left: 500 }}>
 			<React.Fragment>
@@ -102,4 +102,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default NumStat;
