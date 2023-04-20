@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import NavBar from "./common/navBar";
@@ -27,6 +27,10 @@ const Container = styled.div`
 `;
 
 const Dashboard = () => {
+	useEffect(() => {
+		document.title = "Dashboard | ProInventory";
+	}, []);
+
 	const [name, setName] = useState("User 1");
 
 	const side = document.querySelector("#root");

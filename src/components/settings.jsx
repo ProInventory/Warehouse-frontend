@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import SideBar from "./common/sideBar";
@@ -25,6 +25,10 @@ const Container = styled.div`
 `;
 
 const Settings = () => {
+	useEffect(() => {
+		document.title = "Settings | ProInventory";
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Container>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { toast } from "react-toastify";
 
@@ -109,6 +109,10 @@ function handleLogin(e) {
 }
 
 const Login = () => {
+	useEffect(() => {
+		document.title = "Login | ProInventory";
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Container>

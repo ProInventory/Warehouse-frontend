@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import StatusPanel from "./status/status";
@@ -25,6 +25,10 @@ const Container = styled.div`
 `;
 
 const Status = () => {
+	useEffect(() => {
+		document.title = "Status | ProInventory";
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Container>

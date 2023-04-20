@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import SideBar from "./common/sideBar";
@@ -60,6 +60,10 @@ const Container = styled.div`
 `;
 
 const NotFound = () => {
+	useEffect(() => {
+		document.title = "404 | ProInventory";
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Container>
