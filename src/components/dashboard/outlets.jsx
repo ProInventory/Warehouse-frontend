@@ -28,10 +28,10 @@ const Container = styled.div`
 		font-family: "Rubik", sans-serif;
 	}
 
-	.progress{
-		width:160px;
-		height:160px;
-		background: red;  
+	.progress {
+		width: 160px;
+		height: 160px;
+		background: red;
 		margin-left: 10%;
 	}
 
@@ -104,7 +104,7 @@ const Container = styled.div`
 
 const NumStat = () => {
 	return (
-		<div style={{ position: "relative", top: -190, left: 45 }}>
+		<div style={{ position: "relative", top: -410, left: 45 }}>
 			<React.Fragment>
 				<div style={{ display: "flex" }}>
 					<Container style={{ marginRight: "20px" }}>
@@ -113,9 +113,7 @@ const NumStat = () => {
 							<form>
 								<div className="txt_field">
 									<br></br>
-									<div className="progress">
-
-									</div>
+									<div className="progress"></div>
 
 									<label className="label-stat">
 										Store 01

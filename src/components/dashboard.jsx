@@ -7,6 +7,7 @@ import MainDash from "./dashboard/main";
 import NumStat from "./dashboard/numStat";
 import Outlets from "./dashboard/outlets";
 import Recent from "./dashboard/recent";
+import Clock from "./dashboard/clock";
 
 const Container = styled.div`
 	display: flex;
@@ -70,6 +71,7 @@ const Dashboard = () => {
 					<Body>
 						<MainDash />
 						<NumStat />
+						<Clock />
 						<Outlets />
 						<Recent />
 					</Body>
