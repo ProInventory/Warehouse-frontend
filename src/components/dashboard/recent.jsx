@@ -42,12 +42,25 @@ const Container = styled.div`
 		padding: 40px 0px 0px 15px;
 	}
 
-	.time-data {
+	.status {
+		position: relative;
 		font-size: 14px;
 		font-weight: regular;
 		color: #6c757d;
 		font-family: "Rubik", sans-serif;
-		padding: 0px 116px 0px 15px;
+		padding: 0px 0px 0px 15px;
+		top: -8px;
+	}
+
+	.time-data {
+		position: relative;
+		font-size: 14px;
+		font-weight: regular;
+		color: #6c757d;
+		font-family: "Rubik", sans-serif;
+		padding: 0px 0px 0px 15px;
+		left: 120px;
+		top: -15px;
 	}
 
 	.time-data-big {
@@ -68,31 +81,108 @@ const Container = styled.div`
 		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 			monospace;
 	}
+
+	.Title {
+		position: relative;
+		margin: 0px 0px;
+		padding: 20px 10px 25px 5px;
+		font-size: 24px;
+		font-weight: bold;
+		color: #6c757d;
+		font-family: "Rubik", sans-serif;
+	}
+
+	.TitleSmall {
+		position: relative;
+		margin: 0px 0px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #6c757d;
+		font-family: "Rubik", sans-serif;
+		left: 105px;
+	}
+
+	.TitleSmall:hover {
+		color: #000000;
+	}
+
+	.activity-card {
+		height: 80px;
+		width: 400px;
+
+		border-radius: 1px;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+		transition: box-shadow 0.3s ease-in-out;
+		position: relative;
+	}
+
+	.activity-card-start {
+		height: 80px;
+		width: 400px;
+
+		border-radius: 1px;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+		transition: box-shadow 0.3s ease-in-out;
+		position: relative;
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+	}
+
+	.activity-card-end {
+		height: 80px;
+		width: 400px;
+
+		border-radius: 1px;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+		transition: box-shadow 0.3s ease-in-out;
+		position: relative;
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+	}
 `;
 
 const NumStat = () => {
 	return (
-		<div style={{ position: "relative", top: -660, left: 950 }}>
+		<div style={{ position: "relative", top: -795, left: 950 }}>
 			<React.Fragment>
 				<Container>
+					<div className="Titles">
+						<label className="Title">Recent Activity</label>
+						<label className="TitleSmall">See All ➜</label>
+					</div>
 					<div className="center">
 						<form>
-							<div className="txt_field">
-								<label className="label-stat">Statistics</label>
-								<br></br>
-								<label className="time-txt">Today</label>
-								<label className="time-txt">This Month</label>
-								<br></br>
-								<label className="time-data">3 Refills</label>
-								<label className="time-data">76 Refills</label>
-								<br></br>
-								<label className="time-txt-sales">
-									Today Sales
+							<div className="activity-card-start">
+								<label className="label-stat">Store 01</label>
+								<br />
+								<label className="status">
+									Stock Update : Pending
 								</label>
-								<br></br>
-								<label className="time-data-big">
-									96,440.00 LKR➜
+								<label className="time-data">2 min ago</label>
+							</div>
+							<div className="activity-card">
+								<label className="label-stat">Store 02</label>
+								<br />
+								<label className="status">
+									Stock Update : Pending
 								</label>
+								<label className="time-data">2 min ago</label>
+							</div>
+							<div className="activity-card">
+								<label className="label-stat">Store 03</label>
+								<br />
+								<label className="status">
+									Stock Update : Pending
+								</label>
+								<label className="time-data">2 min ago</label>
+							</div>
+							<div className="activity-card-end">
+								<label className="label-stat">Store 04</label>
+								<br />
+								<label className="status">
+									Stock Update : Pending
+								</label>
+								<label className="time-data">2 min ago</label>
 							</div>
 						</form>
 					</div>
