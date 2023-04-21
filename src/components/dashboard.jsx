@@ -46,7 +46,7 @@ const Body = styled.div`
 	@media (max-width: 1800px) {
 		width: 135%;
 		transform-origin: top left;
-		transform: scale(0.78) translate(0%, 0%);
+		transform: scale(0.78) translate(0%, 1%);
 	}
 `;
 

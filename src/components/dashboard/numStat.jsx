@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
 	.center {
-		width: clamp(100px, 50%, 400px);
-		height: clamp(100px, 50%, 200px);
+		width: 400px;
+		height: 220px;
 		background: #e8e8e8;
 		border-radius: 25px;
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
@@ -67,6 +67,18 @@ const Container = styled.div`
 	code {
 		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 			monospace;
+	}
+
+	@media (max-width: 1800px) {
+		position: relative;
+		top: 45px;
+		transform-origin: top left;
+		transform: scale(0.8);
+
+		.center {
+			width: 600px;
+			height: 220px;
+		}
 	}
 `;
 
