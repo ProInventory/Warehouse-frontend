@@ -11,10 +11,11 @@ const Container = styled.div`
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
 		transition: box-shadow 0.3s ease-in-out;
 		position: relative;
+		text-align:center;
 	}
 
 	.center:hover {
-		box-shadow: 0px 2px 10px rgba(128, 0, 128, 0.2);
+		box-shadow: 0px 2px 10px rgba(128, 0, 128, 0.2);	
 	}
 
 	.Title {
@@ -29,12 +30,21 @@ const Container = styled.div`
 
 	.label-stat {
 		position: relative;
-		margin: 0px 0px;
-		padding: 15px 0px 0px 15px;
 		font-size: 24px;
 		font-weight: bold;
 		color: #6c757d;
 		font-family: "Rubik", sans-serif;
+		margin-top: 80%;
+	}
+
+	.label-stat:hover {
+		color: #00000f;
+		transition: color 0.2s ease-in-out;
+	}
+
+	.label-stat-location{
+		font-size:18px;
+		font-weight: lighter;
 	}
 
 	.time-txt {
@@ -71,6 +81,7 @@ const Container = styled.div`
 		top: -10px;
 		transition: color 0.3s ease-in-out;
 	}
+
 	.time-data-big:hover {
 		color: #00000f;
 		transition: color 0.2s ease-in-out;
@@ -92,7 +103,11 @@ const NumStat = () => {
 							<form>
 								<div className="txt_field">
 									<label className="label-stat">
-										WIP Store 01
+										Store 01
+										<br></br>
+										<label className="label-stat-location">
+											Malabe
+										</label>
 									</label>
 									<br></br>
 								</div>
@@ -106,7 +121,11 @@ const NumStat = () => {
 							<form>
 								<div className="txt_field">
 									<label className="label-stat">
-										WIP Store 02
+										Store 02
+										<br></br>
+										<label className="label-stat-location">
+											Kandy
+										</label>
 									</label>
 									<br></br>
 								</div>
@@ -120,7 +139,11 @@ const NumStat = () => {
 							<form>
 								<div className="txt_field">
 									<label className="label-stat">
-										WIP Store 03
+										Store 03
+										<br></br>
+										<label className="label-stat-location">
+											Homagama
+										</label>
 									</label>
 									<br></br>
 								</div>
@@ -134,7 +157,11 @@ const NumStat = () => {
 							<form>
 								<div className="txt_field">
 									<label className="label-stat">
-										WIP Store 04
+										Store 04
+										<br></br>
+										<label className="label-stat-location">
+											Kegalle
+										</label>
 									</label>
 									<br></br>
 								</div>
