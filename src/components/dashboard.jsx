@@ -5,54 +5,59 @@ import NavBar from "./common/navBar";
 import SideBar from "./common/sideBar";
 import MainDash from "./dashboard/main";
 import NumStat from "./dashboard/numStat";
+import Outlets from "./dashboard/outlets";
 
 const Container = styled.div`
-	#parent {
-		display: table;
-		width: 100%;
-		height: 100%;
-	}
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap; /* wrap children to new line if there isn't enough space */
 
-	#sidebar {
-		display: table-cell;
-		width: 20%;
-		vertical-align: top;
-	}
+  @media (max-width: 1000px) {
+    & > div:first-child {
+      display: none; /* hide sidebar if screen is narrower than 1000px */
+    }
 
-	#dashElements {
-		overflow: hidden;
-		background-color: #d1d1d1;
-		display: table-cell;
-	}
+    & > div:last-child {
+      width: 100%; /* make the dash elements wrapper take up the entire width */
+    }
+  }
+`;
+
+const SidebarWrapper = styled.div`
+  width: 20%;
+`;
+
+const DashElementsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #d1d1d1;
+  width: 80%;
 `;
 
 const Dashboard = () => {
-	useEffect(() => {
-		document.title = "Dashboard | ProInventory";
-	}, []);
+  useEffect(() => {
+    document.title = "Dashboard | ProInventory";
+  }, []);
 
-	const [name, setName] = useState("User 1");
+  const [name, setName] = useState("User 1");
 
-	const side = document.querySelector("#root");
-	side.style.setProperty("height", "100%");
+  return (
+    <React.Fragment>
+      <Container>
+        <SidebarWrapper>
+          <SideBar user={name} />
+        </SidebarWrapper>
 
-	return (
-		<React.Fragment>
-			<Container>
-				<div id="parent">
-					<div id="sidebar" style={{ height: "100vh" }}>
-						<SideBar user={name} />
-					</div>
-
-					<div id="dashElements">
-						<NavBar />
-						<MainDash />
-						<NumStat />
-					</div>
-				</div>
-			</Container>
-		</React.Fragment>
-	);
+        <DashElementsWrapper>
+          <NavBar />
+          <MainDash />
+          <NumStat />
+          <Outlets />
+        </DashElementsWrapper>
+      </Container>
+    </React.Fragment>
+  );
 };
 
 export default Dashboard;
