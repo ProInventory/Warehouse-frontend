@@ -28,13 +28,19 @@ const Container = styled.div`
 		font-family: "Rubik", sans-serif;
 	}
 
+	.progress{
+		width:160px;
+		height:160px;
+		background: red;  
+		margin-left: 10%;
+	}
+
 	.label-stat {
 		position: relative;
 		font-size: 24px;
 		font-weight: bold;
 		color: #6c757d;
 		font-family: "Rubik", sans-serif;
-		margin-top: 80%;
 	}
 
 	.label-stat:hover {
@@ -106,6 +112,11 @@ const NumStat = () => {
 						<div className="center">
 							<form>
 								<div className="txt_field">
+									<br></br>
+									<div className="progress">
+
+									</div>
+
 									<label className="label-stat">
 										Store 01
 										<br></br>
