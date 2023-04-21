@@ -29,10 +29,57 @@ const Container = styled.div`
 	}
 
 	.progress{
-		width:160px;
-		height:160px;
-		background: red;  
-		margin-left: 10%;
+		width:140px;
+		height:140px;
+		position: relative;
+		margin-left: 15%;
+		border-radius: 50%;
+		background: #e8e8e8;
+	}
+
+	.outer{
+		height: 140px;
+    	width: 140px;
+    	border-radius: 50%;
+		padding: 10.5%;
+		box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+					-6px -6px 10px -1px rgba(255,255, 255, 0.7);
+	}
+
+	.inner{
+		height: 110px;
+    	width: 110px;
+    	border-radius: 50%;
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                    0px 12px 10px -10px rgba(0, 0, 0, 0.15);
+	}
+
+	#percentage{
+		font-weight: bolder;
+		font-family: "Rubik", sans-serif;
+		color:#b19cd8;
+		font-size: 30px;
+	}
+
+	circle{
+		fill: none;
+		stroke: #b19cd8;
+		stroke-width: 20px
+		stroke-dasharray: 200px;
+		stroke-dashoffset: 0px;
+	}
+
+	svg{
+		position: absolute;
+    	top:0;
+    	left:0;
+}
 	}
 
 	.label-stat {
@@ -114,6 +161,23 @@ const NumStat = () => {
 								<div className="txt_field">
 									<br></br>
 									<div className="progress">
+										<div className="outer">
+											<div className="inner">
+												<div id="percentage">
+													75%
+												</div>
+											</div>
+										</div>
+
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+												<defs>
+													<linearGradient id="GradientColor">
+													<stop offset="0%" stop-color="#e91e63" />
+													<stop offset="100%" stop-color="#673ab7" />
+													</linearGradient>
+												</defs>
+												<circle cx="80" cy="80" r="70" stroke-linecap="round" />
+										</svg>
 
 									</div>
 
