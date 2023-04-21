@@ -72,7 +72,7 @@ const Container = styled.div`
 
 const NumStat = () => {
 	return (
-		<div style={{ position: "relative", top: -440, left: 950 }}>
+		<div style={{ position: "relative", top: -660, left: 950 }}>
 			<React.Fragment>
 				<Container>
 					<div className="center">
