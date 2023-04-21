@@ -6,6 +6,7 @@ import SideBar from "./common/sideBar";
 import MainDash from "./dashboard/main";
 import NumStat from "./dashboard/numStat";
 import Outlets from "./dashboard/outlets";
+import Recent from "./dashboard/recent";
 
 const Container = styled.div`
 	display: flex;
@@ -48,12 +49,12 @@ const Dashboard = () => {
 				<SidebarWrapper>
 					<SideBar user={name} />
 				</SidebarWrapper>
-
 				<DashElementsWrapper>
 					<NavBar />
 					<MainDash />
 					<NumStat />
 					<Outlets />
+					<Recent />
 				</DashElementsWrapper>
 			</Container>
 		</React.Fragment>

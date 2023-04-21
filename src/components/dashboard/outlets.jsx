@@ -11,11 +11,11 @@ const Container = styled.div`
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
 		transition: box-shadow 0.3s ease-in-out;
 		position: relative;
-		text-align:center;
+		text-align: center;
 	}
 
 	.center:hover {
-		box-shadow: 0px 2px 10px rgba(128, 0, 128, 0.2);	
+		box-shadow: 0px 2px 10px rgba(128, 0, 128, 0.2);
 	}
 
 	.Title {
@@ -42,8 +42,8 @@ const Container = styled.div`
 		transition: color 0.2s ease-in-out;
 	}
 
-	.label-stat-location{
-		font-size:18px;
+	.label-stat-location {
+		font-size: 18px;
 		font-weight: lighter;
 	}
 
@@ -89,6 +89,10 @@ const Container = styled.div`
 	code {
 		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 			monospace;
+	}
+
+	@media screen and (max-width: 1800px) {
+		transform: scale(1);
 	}
 `;
 
