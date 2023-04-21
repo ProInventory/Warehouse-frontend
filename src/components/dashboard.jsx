@@ -36,9 +36,25 @@ const DashElementsWrapper = styled.div`
 	width: 80%;
 `;
 
+const Body = styled.div`
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background-color: #d1d1d1;
+	width: 100%;
+
+	@media (max-width: 1800px) {
+		width: 135%;
+		transform-origin: top left;
+		transform: scale(0.78) translate(0%, 0%);
+	}
+`;
+
 const Dashboard = () => {
 	useEffect(() => {
 		document.title = "Dashboard | ProInventory";
+		document.documentElement.style.overflow = "hidden";
+		document.body.style.overflow = "hidden";
 	}, []);
 
 	const [name, setName] = useState("User 1");
@@ -51,10 +67,12 @@ const Dashboard = () => {
 				</SidebarWrapper>
 				<DashElementsWrapper>
 					<NavBar />
-					<MainDash />
-					<NumStat />
-					<Outlets />
-					<Recent />
+					<Body>
+						<MainDash />
+						<NumStat />
+						<Outlets />
+						<Recent />
+					</Body>
 				</DashElementsWrapper>
 			</Container>
 		</React.Fragment>
