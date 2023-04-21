@@ -99,7 +99,7 @@ const Container = styled.div`
 		font-weight: bold;
 		color: #6c757d;
 		font-family: "Rubik", sans-serif;
-		left: 105px;
+		left: 88px;
 	}
 
 	.TitleSmall:hover {
@@ -147,7 +147,7 @@ const NumStat = () => {
 			<React.Fragment>
 				<Container>
 					<div className="Titles">
-						<label className="Title">Recent Activity</label>
+						<label className="Title">Recent Activities</label>
 						<label className="TitleSmall">See All ➜</label>
 					</div>
 					<div className="center">

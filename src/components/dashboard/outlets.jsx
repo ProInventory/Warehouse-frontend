@@ -89,13 +89,12 @@ const Container = styled.div`
 		animation: anim 0.5s linear forwards;
 	}
 
-	.circle2 {
+	circle {
 		fill: none;
 		stroke: #b19cd8;
 		stroke-width: 20px;
-		stroke-dasharray: 300;
-		stroke-dashoffset: 0;
-		animation: anim2 0.5s linear forwards;
+		stroke-dasharray: 472;
+		stroke-dashoffset: 200;
 	}
 
 	svg {
@@ -107,12 +106,6 @@ const Container = styled.div`
 	@keyframes anim {
 		100% {
 			stroke-dashoffset: 118;
-		}
-	}
-
-	@keyframes anim2 {
-		100% {
-			stroke-dashoffset: 236;
 		}
 	}
 
@@ -275,7 +268,7 @@ const NumStat = () => {
 													/>
 												</linearGradient>
 											</defs>
-											<circle
+											<circle2
 												classname="circle2"
 												cx="80"
 												cy="80"

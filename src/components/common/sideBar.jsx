@@ -126,18 +126,22 @@ const Container = styled.div`
 	}
 
 	a:link {
+		color: #36454f;
 		text-decoration: none;
 	}
 
 	a:visited {
+		color: #36454f;
 		text-decoration: none;
 	}
 
 	a:hover {
+		color: #36454f;
 		text-decoration: underline;
 	}
 
 	a:active {
+		color: #36454f;
 		text-decoration: underline;
 	}
 `;
