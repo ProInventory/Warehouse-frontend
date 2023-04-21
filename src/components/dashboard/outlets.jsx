@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
 	.center {
 		width: clamp(100px, 50%, 200px);
-		height: 250px;
+		height: 300px;
 		width: 200px;
 		background: #e8e8e8;
 		border-radius: 25px;
@@ -29,30 +29,31 @@ const Container = styled.div`
 	}
 
 	.progress{
-		width:140px;
-		height:140px;
+		width:160px;
+		height:160px;
 		position: relative;
-		margin-left: 15%;
+		margin-left: 10%;
 		border-radius: 50%;
 		background: #e8e8e8;
 	}
 
 	.outer{
-		height: 140px;
-    	width: 140px;
+		height: 160px;
+    	width: 160px;
     	border-radius: 50%;
-		padding: 10.5%;
+		padding: 9%;
 		box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
 					-6px -6px 10px -1px rgba(255,255, 255, 0.7);
 	}
 
 	.inner{
-		height: 110px;
-    	width: 110px;
+		background:  #e8e8e8;
+		height: 130px;
+    	width: 130px;
     	border-radius: 50%;
+    	justify-content: center;
 		display: flex;
     	align-items: center;
-    	justify-content: center;
     	box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
                 inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
                     -0.5px -0.5px 0px rgba(255, 255, 255, 1),
@@ -61,25 +62,48 @@ const Container = styled.div`
 	}
 
 	#percentage{
+		
 		font-weight: bolder;
 		font-family: "Rubik", sans-serif;
-		color:#b19cd8;
+		color: #b19cd8;
 		font-size: 30px;
 	}
 
+
 	circle{
-		fill: none;
+		fill:none;
 		stroke: #b19cd8;
-		stroke-width: 20px
-		stroke-dasharray: 200px;
-		stroke-dashoffset: 0px;
+		stroke-width:20px;
+		stroke-dasharray: 472 ;
+		stroke-dashoffset: 472;
+		animation: anim 0.5s linear forwards;
+	}
+
+	.circle2{
+		fill:none;
+		stroke: #b19cd8;
+		stroke-width:20px;
+		stroke-dasharray: 300 ;
+		stroke-dashoffset: 0;
+		animation: anim2 0.5s linear forwards;
 	}
 
 	svg{
 		position: absolute;
-    	top:0;
-    	left:0;
-}
+		top:0;
+		left:0;
+	}
+
+	@keyframes anim{
+		100%{
+			stroke-dashoffset: 118;
+		}
+	}
+
+	@keyframes anim2{
+		100%{
+			stroke-dashoffset: 236;
+		}
 	}
 
 	.label-stat {
@@ -150,6 +174,7 @@ const Container = styled.div`
 `;
 
 const NumStat = () => {
+
 	return (
 		<div style={{ position: "relative", top: -410, left: 45 }}>
 			<React.Fragment>
@@ -199,6 +224,27 @@ const NumStat = () => {
 						<div className="center">
 							<form>
 								<div className="txt_field">
+									<br></br>
+									<div className="progress">
+										<div className="outer">
+											<div className="inner">
+												<div id="percentage">
+													50%
+												</div>
+											</div>
+										</div>
+
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+												<defs>
+													<linearGradient id="GradientColor">
+													<stop offset="0%" stop-color="#e91e63" />
+													<stop offset="100%" stop-color="#673ab7" />
+													</linearGradient>
+												</defs>
+												<circle classname="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
+										</svg>
+
+									</div>
 									<label className="label-stat">
 										Store 02
 										<br></br>
