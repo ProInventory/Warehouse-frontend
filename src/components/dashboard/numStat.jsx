@@ -76,7 +76,7 @@ const Container = styled.div`
 		transform: scale(0.8);
 
 		.center {
-			width: 600px;
+			width: 500px;
 			height: 220px;
 		}
 	}
