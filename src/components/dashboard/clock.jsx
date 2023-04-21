@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -68,6 +68,23 @@ const Container = styled.div`
 `;
 
 const Clock = () => {
+	const [time, setTime] = useState(new Date());
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setTime(new Date());
+		}, 1000);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	const currentDate = time.toLocaleDateString(undefined, {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	});
+
 	return (
 		<div style={{ position: "relative", top: -440, left: 950 }}>
 			<React.Fragment>
@@ -76,15 +93,20 @@ const Clock = () => {
 						<form>
 							<div className="txt_field">
 								<label className="time-txt">Today is,</label>
-								<br></br>
+								<br />
 								<label className="label-stat">
-									Friday, 21st April
+									{currentDate}
 								</label>
-								<br></br>
-								<br></br>
-								<br></br>
+								<br />
+								<br />
+								<br />
 								<label className="time-data-big">
-									10:25:50 PM
+									{time.toLocaleTimeString([], {
+										hour: "2-digit",
+										minute: "2-digit",
+										second: "2-digit",
+										hour12: true,
+									})}
 								</label>
 							</div>
 						</form>

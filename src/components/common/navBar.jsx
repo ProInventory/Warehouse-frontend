@@ -83,6 +83,10 @@ const Container = styled.div`
 		background-color: #ddd;
 	}
 
+	.circle:hover {
+		background-color: #c0c0c0;
+	}
+
 	.fa {
 		position: absolute;
 		top: 50%;
@@ -102,15 +106,21 @@ const Container = styled.div`
 	}
 
 	.messages {
-		right: 60%;
+		position: relative;
+		right: -15px;
+		top: -5px;
 	}
 
 	.alerts {
-		right: 34%;
+		position: relative;
+		right: -105px;
+		top: -55px;
 	}
 
 	.profile {
-		right: 8%;
+		position: relative;
+		right: -200px;
+		top: -105px;
 	}
 
 	.image-container {
@@ -141,6 +151,16 @@ const Container = styled.div`
 		border-radius: 50%;
 		padding: 2px 6px;
 	}
+
+	.message-container {
+		display: none;
+	}
+
+	@media (max-width: 1800px) {
+		width: 135%;
+		transform-origin: top left;
+		transform: scale(0.69) translate(1%, 25%);
+	}
 `;
 
 const NavBar = () => {
@@ -153,6 +173,7 @@ const NavBar = () => {
 					<div className="welcomeHead">
 						Welcome <div className="name">{name}</div>,
 					</div>
+
 					<div className="welcomeBody">
 						Welcome back, Have a great {time}!
 					</div>
@@ -182,13 +203,11 @@ const NavBar = () => {
 						<FontAwesomeIcon icon={faMessage} className="fa" />
 						<div className="notification-count">5</div>
 					</div>
-
 					<div className="circle-container alerts">
 						<div className="circle"></div>
 						<FontAwesomeIcon icon={faBell} className="fa" />
 						<div className="notification-count">10</div>
 					</div>
-
 					<div className="circle-container profile">
 						<div className="circle"></div>
 						<div className="image-container">
