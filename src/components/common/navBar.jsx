@@ -155,15 +155,6 @@ const Container = styled.div`
 	.message-container {
 		display: none;
 	}
-
-	@media (max-width: 1800px) {
-		width: 135%;
-		transform-origin: top left;
-		transform: scale(0.69) translate(1%, 25%);
-		position: relative;
-		top: 20px;
-		left: 0px;
-	}
 `;
 
 const NavBar = () => {
