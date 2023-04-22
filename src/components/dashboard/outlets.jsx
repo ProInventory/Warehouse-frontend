@@ -199,6 +199,10 @@ const Container = styled.div`
   		border-bottom-right-radius: 25px;
 	}
 
+	.btn:hover{
+		background: #6c757d;
+	}
+
 	.time-txt {
 		font-size: 16px;
 		font-weight: bold;
