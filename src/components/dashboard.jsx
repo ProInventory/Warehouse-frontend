@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 import NavBar from "./common/navBar";
 import SideBar from "./common/sideBar";
-import MainDash from "./dashboard/main";
 import NumStat from "./dashboard/numStat";
 import Outlets from "./dashboard/outlets";
 import Recent from "./dashboard/recent";
@@ -76,8 +75,7 @@ const Dashboard = () => {
 						<Clock />
 						<Outlets />
 						<Recent />
-						<Tops/>
-						
+						<Tops />
 					</Body>
 				</DashElementsWrapper>
 			</Container>

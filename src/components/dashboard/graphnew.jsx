@@ -28,14 +28,18 @@ const Container = styled.div`
 	.label-time {
 		position: relative;
 		margin: 0px 0px;
-		padding: 0px 0px 0px 160px;
+		padding: 0px 0px 0px 5px;
 		font-size: 15px;
 		font-weight: bold;
 		color: #6c757d;
 		font-family: "Rubik", sans-serif;
-		top: -2px;
-		left: -18px;
-		letter-spacing: 8px;
+		top: -25px;
+		left: 145px;
+		letter-spacing: 5px;
+	}
+
+	.label-time:hover {
+		color: #b19cd8;
 	}
 
 	.txt_field {
@@ -88,13 +92,17 @@ const Container = styled.div`
 			position: relative;
 			margin: 0px 0px;
 			padding: 0px 0px 0px px;
-			font-size: 15px;
-			font-weight: bold;
+			font-size: 10px;
+			font-weight: regular;
 			color: #6c757d;
 			font-family: "Rubik", sans-serif;
-			top: -2px;
-			left: 25px;
+			top: -30px;
+			left: 190px;
 			letter-spacing: 8px;
+		}
+
+		.label-time:hover {
+			color: #b19cd8;
 		}
 
 		.txt_field {
@@ -158,8 +166,12 @@ const Graph = () => {
 						>
 							{date.join(" ")}
 						</label>
-
-						<label className="label-time"> D W M Y</label>
+						<div className="time-select"></div>
+						<br />
+						<label className="label-time"> D</label>
+						<label className="label-time"> W</label>
+						<label className="label-time"> M</label>
+						<label className="label-time"> Y</label>
 					</form>
 				</div>
 			</Container>
