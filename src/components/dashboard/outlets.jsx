@@ -250,6 +250,24 @@ const Container = styled.div`
 	@media screen and (max-width: 1800px) {
 		transform: scale(1);
 	}
+
+	.top-seller-store {
+		width: clamp(100px, 50%, 200px);
+		display:flex;
+		height: 70px;
+		width: 424px;
+		background: #e8e8e8;
+		border-radius: 15px;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+		transition: box-shadow 0.3s ease-in-out;
+		position: relative;
+		text-align: center;
+	}
+
+	.top-seller-store:hover {
+		box-shadow: 0px 2px 10px rgba(128, 0, 128, 0.2);
+	}
+
 `;
 
 const NumStat = () => {

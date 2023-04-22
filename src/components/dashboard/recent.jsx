@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 const Container = styled.div`
 	.center {
-		height: 440px;
+		height: 425px;
 		width: 400px;
 		background: #e8e8e8;
 		border-radius: 25px;
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
 		transition: box-shadow 0.3s ease-in-out;
-		position: relative;
+		position: absolute;
 	}
 
 	.center:hover {

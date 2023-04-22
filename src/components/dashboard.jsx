@@ -9,6 +9,7 @@ import Outlets from "./dashboard/outlets";
 import Recent from "./dashboard/recent";
 import Clock from "./dashboard/clock";
 import Graph from "./dashboard/graphnew";
+import Tops from "./dashboard/tops";
 
 const Container = styled.div`
 	display: flex;
@@ -75,6 +76,8 @@ const Dashboard = () => {
 						<Clock />
 						<Outlets />
 						<Recent />
+						<Tops/>
+						
 					</Body>
 				</DashElementsWrapper>
 			</Container>
