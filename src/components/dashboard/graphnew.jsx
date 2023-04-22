@@ -62,6 +62,52 @@ const Container = styled.div`
 	.bar:hover .tooltip {
 		opacity: 1;
 	}
+
+	@media (max-width: 1800px) {
+		position: relative;
+		top: 45px;
+		transform-origin: top left;
+		transform: scale(0.8);
+
+		.center {
+			width: 500px;
+			height: 220px;
+		}
+
+		.label-stat {
+			position: relative;
+			margin: 0px 0px;
+			padding: 20px 0px 5px 70px;
+			font-size: 10px;
+			font-weight: regular;
+			color: #6c757d;
+			font-family: "Rubik", sans-serif;
+		}
+
+		.label-time {
+			position: relative;
+			margin: 0px 0px;
+			padding: 0px 0px 0px px;
+			font-size: 15px;
+			font-weight: bold;
+			color: #6c757d;
+			font-family: "Rubik", sans-serif;
+			top: -2px;
+			left: 25px;
+			letter-spacing: 8px;
+		}
+
+		.txt_field {
+			padding: 100px 0px 50px 0px;
+			transform: scale(0.9);
+			position: relative;
+			top: 22px;
+			left: 0px;
+			position: relative;
+			top: 15px;
+			left: 35px;
+		}
+	}
 `;
 
 const Graph = () => {
