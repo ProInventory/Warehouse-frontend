@@ -18,7 +18,7 @@ const Container = styled.div`
 	.label-stat {
 		position: relative;
 		margin: 0px 0px;
-		padding: 25px 0px 5px 30px;
+		padding: 20px 0px 5px 30px;
 		font-size: 10px;
 		font-weight: regular;
 		color: #6c757d;
@@ -33,7 +33,7 @@ const Container = styled.div`
 		font-weight: bold;
 		color: #6c757d;
 		font-family: "Rubik", sans-serif;
-		top: -6px;
+		top: -2px;
 		left: -18px;
 		letter-spacing: 8px;
 	}
@@ -42,7 +42,7 @@ const Container = styled.div`
 		padding: 100px 0px 50px 0px;
 		transform: scale(0.9);
 		position: relative;
-		top: 30px;
+		top: 22px;
 		left: 0px;
 	}
 
@@ -86,9 +86,10 @@ const Graph = () => {
 										width: 20,
 										height: percentage + "%",
 										background: "#71797E",
+										borderRadius: "5px",
 										boxSizing: "border-box",
 										transition:
-											"background-color 0.3s ease-in-out",
+											"background-color 0.1s ease-in-out",
 									}}
 									onMouseOver={(e) => {
 										e.target.style.backgroundColor =
