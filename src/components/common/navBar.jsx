@@ -160,6 +160,9 @@ const Container = styled.div`
 		width: 135%;
 		transform-origin: top left;
 		transform: scale(0.69) translate(1%, 25%);
+		position: relative;
+		top: 20px;
+		left: 0px;
 	}
 `;
 
