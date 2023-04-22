@@ -40,6 +40,7 @@ const Container = styled.div`
 	.TitleSmall:hover {
 		color: #000000;
 	}
+
 	.progress {
 		width: 160px;
 		height: 160px;
@@ -80,7 +81,7 @@ const Container = styled.div`
 		font-size: 30px;
 	}
 
-	circle {
+	.circle-1 {
 		fill: none;
 		stroke: #b19cd8;
 		stroke-width: 20px;
@@ -89,15 +90,7 @@ const Container = styled.div`
 		animation: anim 0.5s linear forwards;
 	}
 
-	circle {
-		fill: none;
-		stroke: #b19cd8;
-		stroke-width: 20px;
-		stroke-dasharray: 472;
-		stroke-dashoffset: 200;
-	}
-
-	svg {
+	.svg-1 {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -105,9 +98,73 @@ const Container = styled.div`
 
 	@keyframes anim {
 		100% {
-			stroke-dashoffset: 118;
+			stroke-dashoffset: 118; /* 188 calculated by (472-472*0.75) */
 		}
 	}
+
+	.circle-2 {
+		fill: none;
+		stroke: #b19cd8;
+		stroke-width: 20px;
+		stroke-dasharray: 472;
+		stroke-dashoffset: 472;
+		animation: anim2 0.5s linear forwards;
+	}
+
+	.svg-2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@keyframes anim2 {
+		100% {
+			stroke-dashoffset: 236; /* 188 calculated by (472-472*0.75) */
+		}
+	}
+
+	.circle-3 {
+		fill: none;
+		stroke: #b19cd8;
+		stroke-width: 20px;
+		stroke-dasharray: 472;
+		stroke-dashoffset: 472;
+		animation: anim3 0.5s linear forwards;
+	}
+
+	.svg-3 {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@keyframes anim3 {
+		100% {
+			stroke-dashoffset: 103; /* 188 calculated by (472-472*0.75) */
+		}
+	}
+
+	.circle-4 {
+		fill: none;
+		stroke: #b19cd8;
+		stroke-width: 20px;
+		stroke-dasharray: 472;
+		stroke-dashoffset: 472;
+		animation: anim4 0.5s linear forwards;
+	}
+
+	.svg-4 {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@keyframes anim4 {
+		100% {
+			stroke-dashoffset: 424; /* 188 calculated by (472-472*0.75) */
+		}
+	}
+
 
 	.label-stat {
 		position: relative;
@@ -125,6 +182,21 @@ const Container = styled.div`
 	.label-stat-location {
 		font-size: 18px;
 		font-weight: lighter;
+	}
+
+	.btn{
+		background:  #b19cd8;
+		width:100%;
+		height:14.5%;
+		font-size: 18px;
+		font-weight: bold;
+		color: white;
+		font-family: "Rubik", sans-serif;
+		font-weight: lighter;
+		border-top-left-radius: 0;
+  		border-top-right-radius: 0;
+  		border-bottom-left-radius: 25px;
+  		border-bottom-right-radius: 25px;
 	}
 
 	.time-txt {
@@ -193,11 +265,11 @@ const NumStat = () => {
 									<div className="progress">
 										<div className="outer">
 											<div className="inner">
-												<div id="percentage">75%</div>
+												<div id="percentage">  75% </div>
 											</div>
 										</div>
 
-										<svg
+										<svg class="svg-1"
 											xmlns="http://www.w3.org/2000/svg"
 											version="1.1"
 											width="160px"
@@ -215,7 +287,7 @@ const NumStat = () => {
 													/>
 												</linearGradient>
 											</defs>
-											<circle
+											<circle class="circle-1"
 												cx="80"
 												cy="80"
 												r="70"
@@ -234,8 +306,11 @@ const NumStat = () => {
 									<br></br>
 								</div>
 							</form>
+
+							<button className="btn"> See More </button>
 						</div>
 					</Container>
+					
 					<Container
 						style={{ marginRight: "20px", marginTop: "80px" }}
 					>
@@ -250,7 +325,7 @@ const NumStat = () => {
 											</div>
 										</div>
 
-										<svg
+										<svg class="svg-2"
 											xmlns="http://www.w3.org/2000/svg"
 											version="1.1"
 											width="160px"
@@ -268,8 +343,8 @@ const NumStat = () => {
 													/>
 												</linearGradient>
 											</defs>
-											<circle2
-												classname="circle2"
+											<circle 
+												class="circle-2"
 												cx="80"
 												cy="80"
 												r="70"
@@ -287,6 +362,7 @@ const NumStat = () => {
 									<br></br>
 								</div>
 							</form>
+							<button className="btn"> See More </button>
 						</div>
 					</Container>
 					<Container
@@ -295,6 +371,42 @@ const NumStat = () => {
 						<div className="center">
 							<form>
 								<div className="txt_field">
+								<br></br>
+								<div className="progress">
+										<div className="outer">
+											<div className="inner">
+												<div id="percentage">78%</div>
+											</div>
+										</div>
+
+										<svg class="svg-3"
+											xmlns="http://www.w3.org/2000/svg"
+											version="1.1"
+											width="160px"
+											height="160px"
+										>
+											<defs>
+												<linearGradient id="GradientColor">
+													<stop
+														offset="0%"
+														stop-color="#e91e63"
+													/>
+													<stop
+														offset="100%"
+														stop-color="#673ab7"
+													/>
+												</linearGradient>
+											</defs>
+											<circle 
+												class="circle-3"
+												cx="80"
+												cy="80"
+												r="70"
+												stroke-linecap="round"
+											/>
+										</svg>
+									</div>
+
 									<label className="label-stat">
 										Store 03
 										<br></br>
@@ -305,6 +417,7 @@ const NumStat = () => {
 									<br></br>
 								</div>
 							</form>
+							<button className="btn"> See More </button>
 						</div>
 					</Container>
 					<Container
@@ -313,6 +426,42 @@ const NumStat = () => {
 						<div className="center">
 							<form>
 								<div className="txt_field">
+								<br></br>
+								<div className="progress">
+										<div className="outer">
+											<div className="inner">
+												<div id="percentage">10%</div>
+											</div>
+										</div>
+
+										<svg class="svg-4"
+											xmlns="http://www.w3.org/2000/svg"
+											version="1.1"
+											width="160px"
+											height="160px"
+										>
+											<defs>
+												<linearGradient id="GradientColor">
+													<stop
+														offset="0%"
+														stop-color="#e91e63"
+													/>
+													<stop
+														offset="100%"
+														stop-color="#673ab7"
+													/>
+												</linearGradient>
+											</defs>
+											<circle 
+												class="circle-4"
+												cx="80"
+												cy="80"
+												r="70"
+												stroke-linecap="round"
+											/>
+										</svg>
+									</div>
+
 									<label className="label-stat">
 										Store 04
 										<br></br>
@@ -323,6 +472,7 @@ const NumStat = () => {
 									<br></br>
 								</div>
 							</form>
+							<button className="btn"> See More </button>
 						</div>
 					</Container>
 				</div>
