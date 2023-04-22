@@ -9,12 +9,17 @@ const Container = styled.div`
 		margin: 0;
 		padding: 0;
 		font-family: "Helvetica Neue";
-		height: 100vh;
 		overflow: hidden;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
 
+	.bodybg {
+		width: 200vh;
+		height: 100vh;
+		background-color: #2c3338;
+		overflow: hidden;
+	}
 	.center {
 		position: absolute;
 		top: 50%;
@@ -64,6 +69,7 @@ const Container = styled.div`
 		position: relative;
 		margin: 0px 65px;
 		font-size: 14px;
+		font-family: "Rubik", sans-serif;
 	}
 
 	input[name="Name"] {
@@ -97,11 +103,13 @@ const Container = styled.div`
 	}
 
 	code {
-		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-			monospace;
+		font-family: "Rubik", sans-serif;
 	}
-	background-color: #fff;
-	padding: 20px;
+
+	@media (max-width: 1800px) {
+		transform-origin: top left;
+		transform: scale(1) translate(0%, 0%);
+	}
 `;
 
 function handleLogin(e) {
@@ -123,30 +131,32 @@ const Login = () => {
 	return (
 		<React.Fragment>
 			<Container>
-				<div className="center">
-					<form>
-						<div className="txt_field">
-							<div className="texts">
-								<label>Username</label>
-								<br></br>
+				<div className="bodybg">
+					<div className="center">
+						<form>
+							<div className="txt_field">
+								<div className="texts">
+									<label>Username</label>
+									<br></br>
+								</div>
+								<input type="text" name="Name" />
+								<br />
 							</div>
-							<input type="text" name="Name" />
-							<br />
-						</div>
-						<div className="txt_field">
-							<div className="texts">
-								<label>Password</label>
-								<br></br>
+							<div className="txt_field">
+								<div className="texts">
+									<label>Password</label>
+									<br></br>
+								</div>
+								<input type="password" name="Password" /> <br />
 							</div>
-							<input type="password" name="Password" /> <br />
-						</div>
-						<button
-							onClick={handleClick}
-							className="btn btn-primary"
-						>
-							Log In
-						</button>
-					</form>
+							<button
+								onClick={handleClick}
+								className="btn btn-primary"
+							>
+								Log In
+							</button>
+						</form>
+					</div>
 				</div>
 			</Container>
 		</React.Fragment>

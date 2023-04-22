@@ -144,6 +144,29 @@ const Container = styled.div`
 		color: #36454f;
 		text-decoration: underline;
 	}
+	.logout {
+		color: #ff0000;
+
+		a:link {
+			color: #ff0000;
+			text-decoration: none;
+		}
+
+		a:visited {
+			color: #ff0000;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #ff0000;
+			text-decoration: underline;
+		}
+
+		a:active {
+			color: #ff0000;
+			text-decoration: underline;
+		}
+	}
 `;
 
 const SideBar = (props) => {
@@ -208,6 +231,9 @@ const SideBar = (props) => {
 					</div>
 					<div className="products">
 						<Link to="/products">PRODUCTS</Link>
+					</div>
+					<div className="logout">
+						<Link to="/">LOG OUT</Link>
 					</div>
 				</div>
 
