@@ -116,6 +116,10 @@ const Container = styled.div`
 		position: relative;
 	}
 
+	.activity-card:hover {
+		background: #e5e4e2;
+	}
+
 	.activity-card-start {
 		height: 80px;
 		width: 400px;
@@ -126,6 +130,10 @@ const Container = styled.div`
 		position: relative;
 		border-top-left-radius: 25px;
 		border-top-right-radius: 25px;
+	}
+
+	.activity-card-start:hover {
+		background: #e5e4e2;
 	}
 
 	.activity-card-end {
@@ -139,6 +147,9 @@ const Container = styled.div`
 		border-bottom-left-radius: 25px;
 		border-bottom-right-radius: 25px;
 		opacity: 0.5;
+	}
+	.activity-card-end:hover {
+		background: #e5e4e2;
 	}
 `;
 
