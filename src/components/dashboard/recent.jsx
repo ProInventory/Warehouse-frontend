@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
 	.center {
-		height: 340px;
+		height: 440px;
 		width: 400px;
 		background: #e8e8e8;
 		border-radius: 25px;
@@ -138,6 +138,7 @@ const Container = styled.div`
 		position: relative;
 		border-bottom-left-radius: 25px;
 		border-bottom-right-radius: 25px;
+		opacity: 0.5;
 	}
 `;
 
@@ -158,7 +159,7 @@ const NumStat = () => {
 								<label className="status">
 									Stock Update : Pending
 								</label>
-								<label className="time-data">2 min ago</label>
+								<label className="time-data">5 sec ago</label>
 							</div>
 							<div className="activity-card">
 								<label className="label-stat">Store 02</label>
@@ -174,7 +175,16 @@ const NumStat = () => {
 								<label className="status">
 									Stock Update : Pending
 								</label>
-								<label className="time-data">2 min ago</label>
+								<label className="time-data">4 min ago</label>
+							</div>
+
+							<div className="activity-card">
+								<label className="label-stat">Store 03</label>
+								<br />
+								<label className="status">
+									Stock Update : Pending
+								</label>
+								<label className="time-data">6 min ago</label>
 							</div>
 							<div className="activity-card-end">
 								<label className="label-stat">Store 04</label>
@@ -182,7 +192,7 @@ const NumStat = () => {
 								<label className="status">
 									Stock Update : Pending
 								</label>
-								<label className="time-data">2 min ago</label>
+								<label className="time-data">9 min ago</label>
 							</div>
 						</form>
 					</div>
