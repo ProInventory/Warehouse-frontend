@@ -85,7 +85,7 @@ const ProductPanel = () => {
     const [unitPrice, setPrice] = useState("Unit Price");
 
 	return (
-		<Container style={{ marginRight: "20px", marginTop: "80px", marginLeft: "20px" }}>
+		<Container style={{ marginRight: "20px", marginTop: "80px", marginLeft: "30px" }}>
 			<div className="center">
                 <button className="btn-Minus"> - </button>
 				<form>
