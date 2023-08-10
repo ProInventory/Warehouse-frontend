@@ -7,6 +7,7 @@ import Login from "./components/login";
 import Dashboard from "./components/dashboard";
 import Settings from "./components/settings";
 import Status from "./components/status";
+import Products from "./components/products";
 import NotFound from "./components/404";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -19,8 +20,10 @@ function App() {
 				<Route path="/" element={<Login />} />
 				<Route path="/home" element={<Dashboard />} />
 				<Route path="/settings" element={<Settings />} />
+				<Route path="/products" element={<Products />} />
 				<Route path="/status" element={<Status />} />
 				<Route path="*" element={<NotFound />} />
+
 			</Routes>
 		</div>
 	);
